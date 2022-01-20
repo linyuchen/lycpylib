@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"/>
+    <meta charset="UTF-8" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        img{
+            width: 60%;
+        }
+    </style>
+    <title>请先关注</title>
+</head>
+    <body>
+        <div>
+            {% if message %}
+                <p>{{ message }}</p>
+            {% else %}
+                <p>请长按下方二维码关注本公众号</p>
+                <p>之后再重复之前的操作</p>
+            {% endif %}
+        </div>
+        <img src="{{ subscribe_qrcode_url }}"/>
+    </body>
+</html>
