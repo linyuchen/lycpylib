@@ -36,7 +36,7 @@ def split_lines(text: str, line_width: int) -> list[str]:
     result = []
     for c in text:
         # 标点符号算作全角字符
-        if not re.match(r"[\da-zA-Z,#!@$%^&*()]", c):
+        if not re.match(r"[\da-zA-Z,`#!@$*%^&().<>'\"\[\]\-=]", c):
             # if unicodedata.east_asian_width(c) in ('F', 'W'):
             # 全角字符
             current_line_width += 1
@@ -54,4 +54,4 @@ def split_lines(text: str, line_width: int) -> list[str]:
 
 
 if __name__ == '__main__':
-    print(split_lines("我.a我我123@@4567**(8", 3))
+    print(split_lines("我``..**我aa我123@@4567**(8", 3))
