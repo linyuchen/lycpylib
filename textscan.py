@@ -12,7 +12,7 @@ class TextScan(object):
     """垃圾文本检测"""
 
     def __init__(self, content):
-        self._clt = client.AcsClient("LTAI4GGVZ6XJKvbVru8F5fYx", "OTULNVRFv09CjTn09srw4fLLkJkdr2", 'cn-shanghai')
+        self._clt = client.AcsClient("", "", 'cn-shanghai')
         self.conent = content
         self.dataId = str(uuid.uuid1())
         self.time = datetime.datetime.now().microsecond
