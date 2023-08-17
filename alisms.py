@@ -17,7 +17,7 @@ def send_sms(phone, code=""):
         "code": code
     }
     code_data = json.dumps(code_json)
-    client = AcsClient('LTAI4GGVZ6XJKvbVru8F5fYx', 'OTULNVRFv09CjTn09srw4fLLkJkdr2', 'cn-hangzhou')
+    client = AcsClient('', '', 'cn-hangzhou')
     request = CommonRequest()
     request.set_accept_format('json')
     request.set_domain('dysmsapi.aliyuncs.com')
